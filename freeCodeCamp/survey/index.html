@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Customer Feedback Form</h1>
+    <p id="description">We value your feedback! Please fill out this form to help us improve our services.</p>
+
+    <form id="survey-form">
+        <label id="name-label" for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label id="email-label" for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label id="number-label" for="number">Age:</label>
+        <input type="number" id="number" name="age" placeholder="Enter your age" min="1" max="120" required>
+
+        <label for="dropdown">How did you hear about us?</label>
+        <select id="dropdown" name="source">
+            <option value="internet">Internet</option>
+            <option value="friends">Friends</option>
+            <option value="advertisement">Advertisement</option>
+        </select>
+
+        <p>Would you recommend us?</p>
+        <label>
+            <input type="radio" name="recommend" value="yes" required> Yes
+        </label>
+        <label>
+            <input type="radio" name="recommend" value="no"> No
+        </label>
+
+        <p>What services do you use?</p>
+        <label>
+            <input type="checkbox" name="services" value="web"> Web Development
+        </label>
+        <label>
+            <input type="checkbox" name="services" value="seo"> SEO
+        </label>
+        <label>
+            <input type="checkbox" name="services" value="marketing"> Digital Marketing
+        </label>
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Enter your comments here..."></textarea>
+
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+</html>
