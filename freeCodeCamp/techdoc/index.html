@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <header>SQL Documentation</header>
+        <a class="nav-link" href="#Introduction_to_SQL">Introduction to SQL</a>
+        <a class="nav-link" href="#Data_Types">Data Types</a>
+        <a class="nav-link" href="#CRUD_Operations">CRUD Operations</a>
+        <a class="nav-link" href="#Joins">Joins</a>
+        <a class="nav-link" href="#Indexes">Indexes</a>
+    </nav>
+
+    <!-- Main Documentation Section -->
+    <main id="main-doc">
+        <section class="main-section" id="Introduction_to_SQL">
+            <header>Introduction to SQL</header>
+            <p>SQL (Structured Query Language) is a standard language for managing and manipulating databases.</p>
+            <p>It is used to perform tasks such as querying data, updating records, and managing database structures.</p>
+            <code>SELECT * FROM table_name;</code>
+            <p>SQL is widely used in various database systems like MySQL, PostgreSQL, SQL Server, and more.</p>
+        </section>
+
+        <section class="main-section" id="Data_Types">
+            <header>Data Types</header>
+            <p>SQL provides different data types for storing various kinds of data in the database.</p>
+            <p>Some common SQL data types include:</p>
+            <ul>
+                <li>INT – Integer values</li>
+                <li>VARCHAR – Variable-length character strings</li>
+                <li>DATE – Date values</li>
+                <li>FLOAT – Floating-point numbers</li>
+            </ul>
+            <code>CREATE TABLE users (id INT, name VARCHAR(50), birthdate DATE);</code>
+            <p>Choosing the correct data type is crucial for efficient data storage and retrieval.</p>
+        </section>
+
+        <section class="main-section" id="CRUD_Operations">
+            <header>CRUD Operations</header>
+            <p>CRUD stands for Create, Read, Update, and Delete, which are the four basic operations for managing data in a database.</p>
+            <ul>
+                <li><strong>Create:</strong> Insert new data into a table.</li>
+                <li><strong>Read:</strong> Query existing data.</li>
+                <li><strong>Update:</strong> Modify existing data.</li>
+                <li><strong>Delete:</strong> Remove data from a table.</li>
+            </ul>
+            <code>INSERT INTO users (name, birthdate) VALUES ('John Doe', '1990-01-01');</code>
+            <p>Each of these operations corresponds to an SQL statement like INSERT, SELECT, UPDATE, and DELETE.</p>
+        </section>
+
+        <section class="main-section" id="Joins">
+            <header>Joins</header>
+            <p>SQL joins are used to combine rows from two or more tables based on a related column between them.</p>
+            <ul>
+                <li><strong>INNER JOIN:</strong> Returns records that have matching values in both tables.</li>
+                <li><strong>LEFT JOIN:</strong> Returns all records from the left table, and the matched records from the right table.</li>
+                <li><strong>RIGHT JOIN:</strong> Returns all records from the right table, and the matched records from the left table.</li>
+                <li><strong>FULL JOIN:</strong> Returns all records when there is a match in either table.</li>
+            </ul>
+            <code>SELECT users.name, orders.order_id FROM users INNER JOIN orders ON users.id = orders.user_id;</code>
+            <p>Joins are essential for querying data that spans multiple tables in a relational database.</p>
+        </section>
+
+        <section class="main-section" id="Indexes">
+            <header>Indexes</header>
+            <p>Indexes in SQL are used to speed up the retrieval of data from a database table.</p>
+            <p>They work by creating an ordered structure on the columns specified, improving search and query performance.</p>
+            <ul>
+                <li><strong>CREATE INDEX:</strong> Creates an index on a table.</li>
+                <li><strong>UNIQUE INDEX:</strong> Ensures that all values in a column are unique.</li>
+            </ul>
+            <code>CREATE INDEX idx_user_name ON users (name);</code>
+            <p>Indexes can significantly improve the efficiency of query operations, especially in large datasets.</p>
+        </section>
+    </main>
+</body>
+</html>
