@@ -14,9 +14,23 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-    <div class="container contact">\n        <h2>Contact Us</h2>
+    <div class="container contact">
+        <h2>Contact Us</h2>
         <p>Have any questions? Reach out through the form below or connect with us on social media.</p>
-        <form>\n            <input type="text" placeholder="Your Name" required>\n            <input type="email" placeholder="Your Email" required>\n            <textarea placeholder="Your Message" rows="5" required></textarea>\n            <button type="submit">Send Message</button>\n        </form>
+        
+        <form action="#">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
         <div class="social-links">
             <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
         </div>
