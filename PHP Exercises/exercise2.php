@@ -1,5 +1,6 @@
 <?php
-$number = 8;
+echo "Please enter a number: ";
+$number = readline();
 
 if ($number % 2 == 0) {
     echo "The number $number is even.\n";
